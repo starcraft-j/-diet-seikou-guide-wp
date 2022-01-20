@@ -253,7 +253,7 @@ $get_num = $query->post_count;
     </div>
 
     
-<div class="resultvalue"> 検索結果：<span><?php echo $get_num; ?></span>件 
+<div class="resultvalue"> 検索結果：<span><?php echo $get_num - 9; ?></span>件 
 <!-- <a href=""><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/img/researchbutton.png" width="282" class="middle"><span class="sp">再検索する</span></a> -->
 </div>
 
@@ -437,6 +437,8 @@ jQuery(".sortvolume").click(function(){
    ?>
 
    <?php if(strpos($url,"bouhu")) : ?>
+   <?php continue; ?>
+   <?php elseif($post->ID == 369 || $post->ID == 1190 ||$post->ID == 1287 ||$post->ID == 1551 ||$post->ID == 1557 ||$post->ID == 1561 ||$post->ID == 1059 ||$post->ID == 1061 ||$post->ID == 1508 ) : ?>
    <?php continue; ?>
    <?php else : ?>
 <div class="detailbox">
